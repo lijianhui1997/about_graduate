@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
 import { LoginPage } from '../login/login';
+import { ChoosePage } from '../choose/choose';
 /**
  * Generated class for the ZhucePage page.
  *
@@ -59,7 +60,7 @@ export class ZhucePage {
         
 
         });
-        this.navCtrl.push(LoginPage);
+        this.navCtrl.push(ChoosePage);
     }
   };
 

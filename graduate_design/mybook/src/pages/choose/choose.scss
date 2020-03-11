@@ -1,3 +1,29 @@
 page-choose {
-
+    #choose{
+        width: 100%;
+    }
+    #one{
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        background: #EEAEEE;
+        margin-left:15%;
+        border-radius: 60%;
+        span{
+            display: block;
+            padding-top: 43px;
+        }
+    }
+    #two{
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        background: #EEAEEE;
+        margin-left:25%;
+        border-radius: 60%;
+        span{
+            display: block;
+            padding-top: 43px;
+        }
+    }
 }

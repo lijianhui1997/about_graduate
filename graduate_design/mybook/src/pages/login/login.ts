@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
 import { HomePage } from '../home/home';
+import { ChoosePage } from '../choose/choose';
 /**
  * Generated class for the LoginPage page.
  *
@@ -44,7 +45,7 @@ export class LoginPage {
     localStorage.setItem('username',info.username);//本地存储username
     });
 
-    this.navCtrl.push(HomePage);
+    this.navCtrl.push(ChoosePage);
 
   }
 }
