@@ -38,6 +38,20 @@ router.post('/type',function(req,res){
                         res.send(result);
                 })
 })
+//前台发送下标，后台完成任务
+router.post('/index',function(req,res){
+        res.header('Access-Control-Allow-Origin','*');
+        res.header('Content-Type','text/plain;charset="utf-8"');
+        var index=req.body.index;
+        const sql='select * from novel where novel_id=?';
+        db.query(sql,[index],(err,result)=>{
+                        if(err){
+                        console.log(err);
+                        process.exit();
+                        }
+                        res.send(result);
+                })
+})
 
 
 module.exports = router;

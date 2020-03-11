@@ -32,10 +32,30 @@ router.post('/', function(req, res) {
                                   
    		 }
             console.log(result);
-	    res.send(result);
-               
-  });
-}
+	    res.send(result);              
+  		});
+	}
+});
+
+//更新性别信息
+router.post('/update',function(req,res){
+	res.header('Access-Control-Allow-Origin','*');
+        res.header('Content-Type','text/plain; charset="utf-8"');
+	var sex=req.body.sex;
+	var username=req.body.username;
+	const sql='update user set sex=? where username=?';
+	if(sex && username){
+		db.query(sql,[sex,username],(err,result)=>{
+		 if(err){
+                console.error("Error:",err);
+                          process.exit();
+
+                 }
+            console.log(result);
+            res.send(result);
+	})
+	}
+
 
 });
 
