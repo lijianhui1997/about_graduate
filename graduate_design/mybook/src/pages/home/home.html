@@ -1,0 +1,132 @@
+<ion-content>
+  <div id="all">
+      <div id="banner">
+          <div class="top">
+                  <img src="../assets/rem.png" class="logo"/>
+                  <span class="title">书籍推荐网</span>
+                  <input type="search" id="search" placeholder="您想看的书籍" #type/>
+                  <input type="button" id="sousuo" value="搜索" (click)="search(type)"/>
+                  <span class="zhuce" (click)="zhuce()">没有账号？注册一个</span>
+                  <img src="../assets/my.png" class="my" style="width:60px;height:60px" (click)="login()"/>
+          </div>
+          <div class="bottom">
+              <span (click)="isClick(1)" [class.first]="isActive==1">首页</span>
+              <span (click)="isClick(2)" [class.first]="isActive==2">经典句子</span>
+              <span (click)="isClick(3)" [class.first]="isActive==3">青春</span>
+              <span (click)="isClick(4)" [class.first]="isActive==4">句子收藏</span>
+          </div>
+      </div>
+      <div [ngSwitch]="isActive">
+            <div *ngSwitchCase = "1">
+                    <div id="middle">
+                            <div class="middle-top">
+                                <div class="lunbo">
+                                      <ion-slides autoplay="3000" loop="true">
+                                              <ion-slide>
+                                                  <img src="../../assets/pride.jpg" style="width:100%;height:200px"/>
+                                                </ion-slide>
+                                                <ion-slide>
+                                                  <img src="../../assets/pride2.jpg" style="width:100%;height:200px"/>
+                                                </ion-slide>
+                                                <ion-slide>
+                                                  <img src="../../assets/pingfan.jpg" style="width:100%;height:200px"/>
+                                                </ion-slide>
+                                          </ion-slides>
+                                </div>
+                               <div class="right">
+                                   <span>today's book list</span>
+                                   <ul>
+                                       <li>
+                                           傲慢与偏见
+                                       </li>
+                                       <li>
+                                            平凡的世界
+                                       </li>
+                                       <li>
+                                             三体
+                                        </li>
+                                        <li>
+                                              红楼梦
+                                         </li>
+                                   </ul>
+                  
+                               </div>
+                                
+                               
+                            </div>
+                            <div class="middle-bottom">
+                                 <span>热门</span>
+                                <div class="myimg">
+                                    <ul *ngFor='let item of user; let i=index'>
+                                        <li (click)="gonovel(i)">
+                                            <div class="book-img">
+                                                
+                                                        <img src="{{item.img}}" />
+                                                
+                                            </div>
+                                            <div class="book-info">
+                                                <a>
+                                                             <h4>{{item.name}}</h4>      
+                                                </a>
+                                                <p>
+                                                {{item.content}}
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                 </div>
+                            </div>    
+                        </div>
+            </div>
+
+            <div *ngSwitchCase = "2">
+                    <ul *ngFor='let item of juzi;let i=index' class="juzi">
+                        <li>
+                            {{item.juzi_id+1}}.
+                            {{item.content}}
+                            <img src="{{item.flag? imgsrc: imgsrc1}}"       style="width:30px;height:30px;" (click)="shoucang(i)" />
+                            <span>--{{item.book}}</span>
+                        </li>
+                    </ul>
+            </div>
+
+            <div *ngSwitchCase = "3">
+                <div class="myimg">
+                    <ul *ngFor='let item of novel'>
+                        <li>
+                            <div class="book-img">
+                                <a href="#" >
+                                        <img src="{{item.img}}" />
+                                </a>
+                            </div>
+                            <div class="book-info">
+                                <a>
+                                             <h4>{{item.name}}</h4>      
+                                </a>
+                                <p>
+                                {{item.content}}
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                 </div>
+            </div>
+
+            <div *ngSwitchCase = "4">
+                    <ul *ngFor='let item of juzi' class="juzi">
+                        <li>
+                            
+                            {{item.content}}
+                            <span>--{{item.book}}</span>
+                        </li>
+                    </ul>
+            </div>
+
+      </div>
+      <div id="footer">
+
+      </div>
+      
+  </div>
+</ion-content>
+

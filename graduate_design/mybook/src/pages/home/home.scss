@@ -1,0 +1,236 @@
+page-home {
+    #all{
+        padding: 0;
+        margin:0 auto;
+    }
+    #banner{
+        width: 90%;
+        margin: 0 auto;
+        height:150px;
+         background: #fefefe;
+        // background: rgb(236, 173, 205);
+        box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    
+    }
+    .top{
+        width: 100%;
+        float: left;
+        margin:0 auto; 
+        height: 100px;
+        border-bottom:1px solid #e6e6e6;
+    }
+    #banner img{
+        width: 85px;
+        height: 85px;
+        margin-left: 5%;
+        float: left;
+    }
+    
+     .title{
+        font-size:20px;
+        float: left;
+        line-height: 100px;
+        margin-right: 100px;
+    }
+    #search{
+        width: 250px;
+        height: 30px;
+        display: block;
+        float: left;
+        margin-top: 40px;
+        margin-left: 100px;
+       
+        border-radius: 10px;
+    }
+    #sousuo{
+        display: block;
+        width: 50px;
+        float: left;
+        margin-right: 100px;
+        margin-top: 40px;
+        
+    }
+    .zhuce{
+        line-height: 90px;
+        
+    }
+    
+    .bottom{
+        width: 100%;
+        margin:0 auto;
+        float: left;
+    }
+    .bottom span{
+        display: block;
+        margin-left:10%;
+        margin-right: 120px;
+        margin-top:10px;
+        float: left;
+    } 
+     .first{
+        border-bottom:3px solid rgb(236, 173, 205);
+    }
+    #middle{
+        width:90%;
+       
+        float: left;
+    }
+    #middle .middle-top{
+        width: 100%;
+        margin: 5px 5.5%;
+        
+    }
+    #middle .middle-top .lunbo{
+        width: 60%;
+        float: left;
+        border:1px solid #e6e6e6;
+        margin-left:5%;
+    }
+    #middle .middle-top .right{
+        width: 30%;
+        float: left;
+        margin-left:60px;
+        margin-top:20px;
+        display: block;
+    }
+    .middle-top .right span{
+        font-size: 30px;
+        color: rgb(236, 173, 205);
+    }
+    .middle-top .right ul li{
+        font-size: 20px;
+        text-shadow:5px 5px  rgb(236, 173, 205)
+    }
+    #middle .middle-bottom {
+        width:90%;
+        margin: 0 auto;
+    }
+    #middle .middle-bottom span{
+        width: 100%;
+        display: block;
+        margin-left: 130px;
+        font-size: 20px;
+    }
+    .myimg{
+        width:100%;
+        margin-left:120px;
+        overflow: hidden;
+        
+    }
+    .myimg ul{
+        list-style: none;
+        width: 100%;
+    }
+    .myimg ul li{
+        float: left;
+        width: 220px;
+        margin-right: 40px;
+        padding:23px 0;
+    }
+    .book-img{
+        width: 100px;
+        height: 127px;
+        float: left;
+        margin-right: 12px;
+        border: 1px solid #e6e6e6;
+    }
+    .book-img a {
+        width:100%;
+        height: 100%;
+        position:relative;
+        z-index: 1;
+        display: block;
+        overflow: hidden;
+        box-shadow: 0 1px 6px rgba(0,0,0,.3),
+        0 0 5px #f9f2e9 inset;
+    }
+    .book-img a img{
+        width: 100px;
+        height: 127px;
+    }
+    .book-info{
+        width: 100px;
+        float: left;
+    }
+    .book-info a{
+        text-decoration: none;
+        color: black;
+    }
+    .book-info h4{
+        font: 16px/21px PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
+        overflow: hidden;
+        height: 21px;
+        margin-top: -3px;
+        margin-bottom: 8px;
+    }
+    .book-info p{
+        font: 12px/20px PingFangSC-Regular,'-apple-system',Simsun;
+        overflow: hidden;
+        height: 100px;
+        margin-bottom: 10px;
+        color: #666;
+    }
+    //每个book
+    // .myimg ul{
+    //     width: 90%;
+    //     margin: 0 auot;
+    //     overflow: hidden;
+    //     list-style: none outside none;
+    // }
+    // .myimg ul li{
+    //     float: left;
+    //     width: 230px;
+    //     margin-right: 20px;
+    //     padding:23px 0;
+    // }
+    // .book-img{
+    //     float: left;
+    //     width: 72px;
+    //     height: 96px;
+    //     margin-right: 12px;
+    //     border: 1px solid #e6e6e6;
+    // }
+    // .book-img a{
+    //     position: relative;
+    //     z-index: 1;
+    //     display: block;
+    //     overflow: hidden;
+    //     width: 100%;
+    //     height: 100%;
+    //     box-shadow: 0 1px 6px rgba(0,0,0,.3),
+    //     0 0 5px #f9f2e9 inset;
+    // }
+    // a img{
+    //     border: none;
+        
+    // }
+    #middle .middle-bottom{
+        width: 90%;
+        float: left;
+    } 
+    
+    #bottom{
+        width: 90%;
+        float: left;
+        margin:0 auto;
+    }
+
+    .juzi{
+        list-style: none;
+        margin-left:100px;
+    }
+
+    .juzi li{
+        font-size: 20px;
+        font-family: '楷体';
+
+    }
+    .juzi li span{
+        display: block;
+        margin-left:500px; 
+    }
+    .juzi li img{
+        color: rgb(236, 173, 205);
+    }
+    
+}

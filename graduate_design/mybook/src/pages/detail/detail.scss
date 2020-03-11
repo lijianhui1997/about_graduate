@@ -1,0 +1,74 @@
+page-detail {
+    ul{
+        list-style: none;
+        width: 90%;
+        margin:0 auto;
+    }
+
+    #novel{
+            position: relative;
+            z-index: 2;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-radius: 6px;
+            background: #fff;
+
+    }
+    .book-img {
+        float: left;
+        width: 180px;
+        height: 240px;
+        margin: 20px 20px 0;
+        border: none;
+    }
+    .book-img img{
+        display: block;
+        width: 180px;
+        height: 240px;
+    }
+
+    .book-img a {
+        position: relative;
+        z-index: 1;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 1px 6px rgba(0,0,0,.3), 0 0 5px #f9f2e9 inset;
+    }
+    .loaded a {
+        transition: color .3s,background-color .3s,border .3s;
+    }
+
+    .book-info {
+        position: relative;
+        z-index: 1;
+        float: left;
+        width: 780px;
+        min-height: 246px;
+        margin-top: 14px;
+        text-align: justify;
+    }
+    a {
+        text-decoration: none;
+        color: #262626;
+        outline: 0;
+    }
+    .book-info h1 a {
+        font: 14px/38px PingFangSC-Regular,'-apple-system',Simsun;
+        margin-left: 10px;
+    }
+
+    p{
+        margin-left: 40px;
+        font-size:20px;
+        font-family: '宋体';
+    }
+
+    video{
+        width: 600px;
+        height: 300px;
+        float: left;
+        margin-left:100px;
+    }
+}

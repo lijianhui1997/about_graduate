@@ -1,0 +1,46 @@
+page-zhuce {
+    ion-content{
+        // background: url(../../assets/imgs/27.jpg);
+        background-size: cover;
+        
+        .div1{
+            margin-top:63px;
+            text-align: center;
+            margin-bottom: 30px;
+            img{
+                width: 60px;
+                height: 60px;
+            }
+            span{
+                font-size: 40px;
+                font-family: YouYuan;
+                font-weight: bold;
+            }
+        }
+        
+        
+    }
+
+    input + span {
+        color: red;
+      }
+      
+      .main {
+        font-size: 1.1em;
+        margin: 50px auto;
+        width: 370px;
+      }
+      
+      #denglu {
+        margin-top:20px;
+        margin-left: 140px;
+        width: 70px;
+      }
+      
+      #width-validate,
+      #height-validate {
+        color: red;
+        font-size: 0.8em;
+        margin-left: 63px;
+      }
+}
