@@ -1,0 +1,10 @@
+{
+    "host":"localhost",
+    "user":"root",
+    "password":"ljh1997",
+    "database":"book",
+    "connectionLimit":10,
+    "supporBigNumbers":true
+
+                
+}
