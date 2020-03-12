@@ -6,6 +6,7 @@ import { ZhucePage } from '../zhuce/zhuce';
 import { LoginPage } from '../login/login';
 import { NovelPage } from '../novel/novel';
 import { DetailPage } from '../detail/detail';
+import { XinxiPage } from '../xinxi/xinxi';
 
 @Component({
   selector: 'page-home',
@@ -143,6 +144,10 @@ export class HomePage {
   
   search(type:HTMLInputElement){
     this.navCtrl.push(NovelPage,{type:type.value});
+  }
+
+  changeinfo(){
+    this.navCtrl.push(XinxiPage);
   }
 
 }

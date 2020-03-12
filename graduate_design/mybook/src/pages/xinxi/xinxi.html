@@ -14,5 +14,21 @@
 
 
 <ion-content padding>
-
+    <div class="myimg">
+        <ul *ngFor='let item of userinfo'>
+            <li>
+                
+                <div class="book-info">
+                    <a>
+                                 <h4>{{item.username}}</h4>      
+                    </a>
+                    <p>
+                    {{item.tel}}
+                    {{item.email}}
+                      {{item.sex}}
+                  </p>
+                </div>
+            </li>
+        </ul>
+     </div>
 </ion-content>

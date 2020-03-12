@@ -19,7 +19,7 @@ page-home {
         height: 100px;
         border-bottom:1px solid #e6e6e6;
     }
-    #banner img{
+    #banner .logo{
         width: 85px;
         height: 85px;
         margin-left: 5%;
@@ -38,8 +38,7 @@ page-home {
         display: block;
         float: left;
         margin-top: 40px;
-        margin-left: 100px;
-       
+        margin-left: 100px;      
         border-radius: 10px;
     }
     #sousuo{
@@ -51,10 +50,21 @@ page-home {
         
     }
     .zhuce{
-        line-height: 90px;
-        
+        line-height: 95px;
+        float: left;
     }
-    
+    .my{
+        float:left;
+        margin:20px 10px;;
+        border-radius: 60%;
+        background: #f9f2e9;
+    }
+    .touxiang{
+        margin-top:15px;
+        display: block;
+        float: left;
+        border-radius: 60%;
+    }
     .bottom{
         width: 100%;
         margin:0 auto;

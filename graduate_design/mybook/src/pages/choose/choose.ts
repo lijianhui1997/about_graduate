@@ -37,4 +37,23 @@ export class ChoosePage {
     });
     this.navCtrl.push(HomePage);
   }
+
+  submittwo(){
+    this.username = localStorage.getItem('username');
+    let sex={sex:'男',username:this.username};
+    this.http.post('/zhuce/update',sex,{
+      headers : this.headers,
+      observe : 'body',
+      responseType : 'json'
+    }
+  ).subscribe(data=>{
+      console.log(data);
+    });
+    this.navCtrl.push(HomePage);
+  }
+
+  passPage(){
+    this.navCtrl.push(HomePage);
+  }
+
 }

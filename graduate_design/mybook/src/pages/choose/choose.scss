@@ -4,26 +4,38 @@ page-choose {
     }
     #one{
         text-align: center;
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         background: #EEAEEE;
         margin-left:15%;
         border-radius: 60%;
         span{
             display: block;
-            padding-top: 43px;
+            padding-top: 70px;
         }
     }
     #two{
         text-align: center;
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         background: #EEAEEE;
-        margin-left:25%;
+        margin-left:40%;
         border-radius: 60%;
         span{
             display: block;
-            padding-top: 43px;
+            padding-top: 56px;
+        }
+    }
+    #pass{
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        background: #EEAEEE;
+        margin-left:75%;
+        border-radius: 60%;
+        span{
+            display: block;
+            padding-top: 96px;
         }
     }
 }
