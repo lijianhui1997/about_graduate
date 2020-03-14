@@ -13,22 +13,83 @@
 </ion-header>
 
 
-<ion-content padding>
-    <div class="myimg">
-        <ul *ngFor='let item of userinfo'>
-            <li>
-                
-                <div class="book-info">
-                    <a>
-                                 <h4>{{item.username}}</h4>      
-                    </a>
-                    <p>
-                    {{item.tel}}
-                    {{item.email}}
-                      {{item.sex}}
-                  </p>
+<ion-content>
+    <div class="container">
+      <div class="my-info-wrap">
+          <div class="my-bg">
+              <div class="info">
+                  <div class="avatar">
+                      <img src="http://lijianhui.site/image/aoman.jpg">
+                  </div>
+                  <h3 *ngFor='let item of userinfo'>
+                    <span  id="nickname">
+                     {{item.username}}
+                    </span>
+                  </h3>
+              </div>
+          </div>
+          <div class="my-nav">
+              <ul>
+                <li (click)="isClick(1)" [class.first]="isActive==1">
+                  <img src="../../assets/my1.png" style="width:30px;height:30px;"/>
+                  我的信息
+                </li>
+                <li (click)="isClick(2)" [class.first]="isActive==2">
+                    <img src="../../assets/myinfo.png" style="width:30px;height:30px;"/>
+                    修改信息
+                </li>
+                <li (click)="isClick(3)" [class.first]="isActive==3">
+                    <img src="../../assets/info.png" style="width:30px;height:30px;"/>
+                  我的通知
+                </li>
+                <li (click)="isClick(4)" [class.first]="isActive==4">
+                    <img src="../../assets/star.png" style="width:30px;height:30px;"/>
+                  我的句子
+                </li>
+                <li (click)="isClick(5)" [class.first]="isActive==5">
+                    <img src="../../assets/shelf1.png" style="width:30px;height:30px;"/>
+                  我的书架
+                </li>
+              </ul>
+          </div>
+      </div>
+      <div class="right-content" [ngSwitch]="isActive">
+        <div *ngSwitchCase = "1">
+            <div class="content-wrap">
+                <div class="content-head">
+                  <h1>个人信息</h1>   
                 </div>
-            </li>
-        </ul>
+            </div>
+            <div  class="content-bottom" >
+                <ul *ngFor='let item of userinfo'>
+                  <li>
+                    用户名：{{item.username}}
+                  </li>
+                  <li>
+                      电话号码：{{item.tel}}
+                  </li>
+                  <li>
+                      邮箱账号：{{item.email}}
+                  </li>
+                  <li>
+                      性别：{{item.sex}}
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <div *ngSwitchCase = "2">
+
+        </div>  
+        <div *ngSwitchCase = "3">
+
+        </div>  
+        <div *ngSwitchCase = "4">
+
+        </div>  
+        <div *ngSwitchCase = "5">
+          
+        </div>  
+      </div>
+        
      </div>
 </ion-content>

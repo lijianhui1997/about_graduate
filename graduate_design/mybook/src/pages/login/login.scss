@@ -1,5 +1,9 @@
 page-login {
-
+    ion-content{
+      background: url(../../assets/bg10.jpg) no-repeat;
+      background-size:100% 100%;;
+      opacity: 0.9;
+    }
     input + span {
         color: red;
       }

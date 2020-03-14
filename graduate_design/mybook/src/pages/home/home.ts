@@ -20,9 +20,12 @@ export class HomePage {
   userinfo;
   username;
   novel;
-  imgsrc='http://lijianhui.site/image/heart%20%281%29.png';
+  haslogin=false;
+  imgsrc='http://lijianhui.site/image/heart.png';
   imgsrc1='http://lijianhui.site/image/Heart.png';
   scjz;
+  avaster2='http://lijianhui.site/image/yun.jpg';
+  avaster1='http://lijianhui.site/image/my.png';
   private headers = new HttpHeaders({'Content-Type':'application/json'});
   constructor(public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
     
@@ -31,10 +34,23 @@ export class HomePage {
     this.http.get('http://47.93.25.185:8000/').subscribe(data=>{
       this.user=data;
     });
-    
-
     this.username = localStorage.getItem('username');
     console.log(this.username);
+    let a={username:this.username};
+      this.http.post('/login/getinfo',a,{
+        headers : this.headers,
+        observe : 'body',
+        responseType : 'json'
+      }
+    ).subscribe(data=>{
+      if(JSON.stringify(data) === '[]' || data===null) {
+        this.haslogin=false;
+        return ;
+        }else{
+          this.haslogin=true;
+        }
+        console.log(data,this.haslogin);
+      });
   }
   //到达具体小说页面
   gonovel(index){
@@ -45,10 +61,16 @@ export class HomePage {
     this.navCtrl.push(ZhucePage);
   }
 
-  login(){
-    this.navCtrl.push(LoginPage);
+  // login(){
+  //   this.navCtrl.push(LoginPage);
+  // }
+  go(){
+    if(this.haslogin){
+      this.navCtrl.push(XinxiPage);
+    }else{
+      this.navCtrl.push(LoginPage);
+    }
   }
-
   //ngswitch事件
   isClick(i){
     this.isActive=i;
@@ -144,6 +166,7 @@ export class HomePage {
   
   search(type:HTMLInputElement){
     this.navCtrl.push(NovelPage,{type:type.value});
+    type.value='';
   }
 
   changeinfo(){

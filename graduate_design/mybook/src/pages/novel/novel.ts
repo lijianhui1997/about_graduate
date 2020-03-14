@@ -17,6 +17,7 @@ import {HttpClient,HttpHeaders} from '@angular/common/http';
 export class NovelPage {
   type;
   novel;
+  exist;
   private headers = new HttpHeaders({'Content-Type':'application/json'});
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient) {
            this.type=this.navParams.get('type');
@@ -30,11 +31,21 @@ export class NovelPage {
             ).subscribe(data=>{
                 console.log(data);
                 this.novel=data;
+                if(this.novel.video){
+                  this.exist=true;
+                }
+                else{
+                  this.exist=false;
+                }
              });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NovelPage');
+  }
+
+  getback(){
+    this.navCtrl.pop();
   }
 
 }

@@ -37,5 +37,8 @@ export class DetailPage {
     //首先接收参数
     
   }
+  goback(){
+    this.navCtrl.pop();
+  }
 
 }

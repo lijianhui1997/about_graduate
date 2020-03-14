@@ -18,6 +18,7 @@ import {HttpClient,HttpHeaders} from '@angular/common/http';
 export class XinxiPage {
   username;
   userinfo;
+  isActive=1;
   private headers = new HttpHeaders({'Content-Type':'application/json'});
   constructor(public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -35,6 +36,10 @@ export class XinxiPage {
         console.log(data);
         this.userinfo=data;
       });
+  }
+
+  isClick(i){
+    this.isActive=i;
   }
 
 }

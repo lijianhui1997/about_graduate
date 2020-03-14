@@ -4,20 +4,14 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>detail</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
+<ion-content>
+  <div id="back">
+    <button (click)="goback()">GO BACK</button>
+  </div>
   <div id="novel">
     <ul *ngFor='let item of novel'>
       <li>
-            <div class="book-img">
+          <div class="book-img">
               <a>
                   <img src="{{item.img}}"/>
               </a>   
@@ -28,8 +22,9 @@
                     {{item.name}}
                     <a>{{item.author}}</a><br>
                 </h1>
-                <h1>【内容概要】</h1>
+                <h3>【内容概要】</h3>
                 <p>{{item.content}}</p>
+                <h3>【影视片段】</h3>
                 <video src="{{item.video}}" controls>该书籍没有视频资料哦</video>
               </a>
             </div>

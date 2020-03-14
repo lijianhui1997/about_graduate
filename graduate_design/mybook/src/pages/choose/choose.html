@@ -4,27 +4,58 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar>
     <ion-title>choose</ion-title>
   </ion-navbar>
 
-</ion-header>
+</ion-header> -->
 
 
 <ion-content padding>
       <div id="choose">
-          <div id="pass" (click)="passPage()">
-              <span>跳过此页面</span>
-          </div>
           <div id="one" (click)="submitone()">
             <span>女生</span>
           </div>
           <div id="two" (click)="submittwo()">
-            <span>男生</span>
+              <span>男生</span>
           </div>
+          <div id="pass" (click)="passPage()">
+              <span>点击跳过此页面</span>
+          </div>
+      </div>
+      <div id="photo">
+          <a class="picture1">
+              <img src="http://lijianhui.site/image/aoman.jpg"/>
+            </a>
+            <a class="picture2">
+              <img src="http://lijianhui.site/image/weiweiyixiao.jpg"/>
+            </a>
+            <a class="picture3">
+              <img src="http://lijianhui.site/image/weileni.jpg"/>
+            </a>
+            <a class="picture4">
+              <img src="http://lijianhui.site/image/zhuifeng.jpg"/>
+            </a>
+            <a class="picture5">
+              <img src="http://lijianhui.site/image/yunbian.jpg"/>
+            </a>
+            <a class="picture6">
+              <img src="http://lijianhui.site/image/nishiwoderongyao.jpg"/>
+            </a>
+            <a class="picture8">
+                <img src="http://lijianhui.site/image/qieting.jpg"/>
+            </a>
+            <a class="picture9">
+                <img src="http://lijianhui.site/image/wozai.jpg"/>
+            </a>
+            <a class="picture10">
+                <img src="http://lijianhui.site/image/womensa.jpg"/>
+            </a>
+            
       </div>
       <!-- 增加跳过按钮和“选择性别有助于我们更准确推荐书籍哦” -->
       <!-- 适当运用canvas动画 -->
+      <!-- 下层绘制照片墙 -->
 </ion-content>

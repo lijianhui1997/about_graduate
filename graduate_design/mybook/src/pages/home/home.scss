@@ -1,7 +1,7 @@
 page-home {
     #all{
         padding: 0;
-        margin:0 auto;
+        // margin:0 auto;
     }
     #banner{
         width: 90%;
@@ -226,6 +226,8 @@ page-home {
     }
 
     .juzi{
+        width: 80%;
+        margin: 20 auto;
         list-style: none;
         margin-left:100px;
     }
@@ -233,14 +235,16 @@ page-home {
     .juzi li{
         font-size: 20px;
         font-family: '楷体';
-
+        box-shadow: 0 1px 5px rgba(0,0,0,.1);
+        padding-top:20px;
+    }
+    .juzi .heart{
+        float: right;
+        margin-right: 20px;
     }
     .juzi li span{
         display: block;
-        margin-left:500px; 
-    }
-    .juzi li img{
-        color: rgb(236, 173, 205);
+        margin-left: 600px;
     }
     
 }
