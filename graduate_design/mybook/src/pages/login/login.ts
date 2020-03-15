@@ -42,7 +42,10 @@ export class LoginPage {
       alert('用户名或密码错误，请重新输入！');
       return ;
       }
-    localStorage.setItem('username',info.username);//本地存储username
+    this.userinfo=data;
+    console.log(this.userinfo[0].user_id);
+    localStorage.setItem('user_id',this.userinfo[0].user_id);
+    localStorage.setItem('username',this.userinfo[0].username);//本地存储username
     });
 
     this.navCtrl.push(ChoosePage);

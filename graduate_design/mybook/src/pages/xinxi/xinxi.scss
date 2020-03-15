@@ -112,6 +112,72 @@ page-xinxi{
     .content-bottom ul li{
         margin:30px;
     }
+
+   
+       
+        #rewrite{
+            margin-top:0;
+            display: block;
+            margin-left:150px;
+        }
+    
+    #partthree{
+        .info{
+            margin-left: 40px;
+        }
+        p{
+            margin-left:50px;
+            font-size:20px;
+        }
+    }
+    #partfour{
+        margin-top:30px;
+        ul{
+            font-size:16px;
+            span{
+                margin-left: 80px;
+            }
+        }
+        .star{
+            margin-left: 40px;
+        }
+    }
+
+    #partfive{
+        // ul{
+        //     float: left;
+        // }
+        
+        .shelf{
+            margin-left: 40px;
+            float: left;
+        }
+        .cat{
+            margin-left: 100px;
+            border-radius: 60%;
+        }
+        .content-wrap{
+            background: #fff;
+        }
+        .content-head{
+            float: left;
+            width: 770px;
+            height: 71px;
+            padding: 0 20px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        h1{
+            font-size: 20px;
+            line-height: 72px;
+            float: left;
+        }
+        em {
+            font: 22px/1 PingFangSC-Regular,'-apple-system',Simsun;
+            float: left;
+            margin: 25px 20px 0;
+            color: #d8d8d8;
+        }
+    }
     
 }
         

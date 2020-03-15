@@ -15,8 +15,10 @@ import {HttpClient,HttpHeaders} from '@angular/common/http';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
+  username;
   index;
   novel;
+  user_id;
   private headers = new HttpHeaders({'Content-Type':'application/json'});
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient) {
     this.index=this.navParams.get('novelindex');
@@ -30,6 +32,15 @@ export class DetailPage {
       ).subscribe(data=>{
       console.log(data);
       this.novel=data;
+      this.username=localStorage.getItem('username');
+      this.user_id = localStorage.getItem('user_id');
+      let b={user_id:this.user_id,book:this.novel[0].name};
+      console.log(b);
+      this.http.post('/search/insert',b,{
+        headers : this.headers,
+        observe : 'body',
+        responseType : 'json'
+        }).subscribe(data=>{ console.log(data); });
       });
   }
 

@@ -38,10 +38,6 @@
                     <img src="../../assets/myinfo.png" style="width:30px;height:30px;"/>
                     修改信息
                 </li>
-                <li (click)="isClick(3)" [class.first]="isActive==3">
-                    <img src="../../assets/info.png" style="width:30px;height:30px;"/>
-                  我的通知
-                </li>
                 <li (click)="isClick(4)" [class.first]="isActive==4">
                     <img src="../../assets/star.png" style="width:30px;height:30px;"/>
                   我的句子
@@ -78,16 +74,72 @@
             </div>
         </div>
         <div *ngSwitchCase = "2">
-
-        </div>  
-        <div *ngSwitchCase = "3">
-
+            <div class="content-wrap">
+                <div class="content-head">
+                  <h1>个人信息</h1>   
+                </div>
+            </div>
+            <div  class="content-bottom" >
+                <ul *ngFor='let item of userinfo'>
+                  <li>
+                    用户名：
+                    <input type="text" placeholder="{{item.username}}" #name>
+                    <img src="../../assets/rewrite2.png" style="width:25px;height:25px;"/>
+                  </li>
+                  <li>
+                      电话号码：
+                      <input type="text" placeholder="{{item.tel}}" #tel>
+                      <img src="../../assets/rewrite2.png" style="width:25px;height:25px;"/>
+                  </li>
+                  <li>
+                      邮箱账号：
+                      <input type="text" placeholder="{{item.email}}" #email>
+                      <img src="../../assets/rewrite2.png" style="width:25px;height:25px;"/>
+                  </li>
+                  <li>
+                      性别：
+                      <input type="text" placeholder="{{item.sex}}" #sex>
+                      <img src="../../assets/rewrite2.png" style="width:25px;height:25px;"/>
+                  </li>
+                  <input id="rewrite" type="button" value="确认修改"  (click)="rewrite(name,tel,email,sex)"/>
+                </ul>
+                
+            </div>
         </div>  
         <div *ngSwitchCase = "4">
-
+            <div id="partfour">
+                    <ul *ngFor='let item of juzi' class="juzi">
+                            <li>   
+                                {{item.content}}
+                                <span>--{{item.book}}</span>
+                            </li>
+                    </ul>
+                    <img class="star" src="../../assets/star.png" style="width:80px;height:80px;"/>
+                    
+            </div>
+            
         </div>  
         <div *ngSwitchCase = "5">
-          
+            <div id="partfive">
+                    <div class="content-wrap">
+                            <div class="content-head">
+                              <h1>我浏览过</h1>   
+                            </div>
+                        </div>
+                <div  class="content-bottom" >
+                    <ul>
+                            <li>
+                                <div class="book-img" *ngFor='let item of novel'>
+                                    <a>
+                                        <img src="{{item.img}}" style="width:120px;height:160px;"/>
+                                    </a>   
+                                  </div>
+                            </li>
+                    </ul>
+                    <img class="shelf" src="../../assets/shelf1.png" style="width:80px;height:80px;"/>
+                    <img class="cat" src="../../assets/cat1.jpg" style="width:80px;height:80px;"/>
+                </div>
+            </div>
         </div>  
       </div>
         

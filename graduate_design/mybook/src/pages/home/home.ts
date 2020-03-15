@@ -13,6 +13,7 @@ import { XinxiPage } from '../xinxi/xinxi';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  user_id;
   flag=false;
   isActive=1;
   user;
@@ -34,9 +35,11 @@ export class HomePage {
     this.http.get('http://47.93.25.185:8000/').subscribe(data=>{
       this.user=data;
     });
+    this.user_id = localStorage.getItem('user_id');
     this.username = localStorage.getItem('username');
     console.log(this.username);
-    let a={username:this.username};
+    let a={user_id:this.user_id};
+    console.log(a);
       this.http.post('/login/getinfo',a,{
         headers : this.headers,
         observe : 'body',
@@ -77,8 +80,9 @@ export class HomePage {
     if(i==2){
       this.http.get('/juzi').subscribe(data=>{
         this.juzi=data;
+        this.user_id = localStorage.getItem('user_id');
           this.username = localStorage.getItem('username');
-          let a={username:this.username};
+          let a={user_id:this.user_id};
           this.http.post('/shoucang/content',a,{
               headers : this.headers,
               observe : 'body',
@@ -117,7 +121,8 @@ export class HomePage {
     if(i==4){
       //在收藏表里查找句子
       this.username = localStorage.getItem('username');
-      let a={username:this.username};
+      this.user_id = localStorage.getItem('user_id');
+      let a={user_id:this.user_id};
       this.http.post('/shoucang/content',a,{
         headers : this.headers,
         observe : 'body',
@@ -136,7 +141,8 @@ export class HomePage {
     if(!this.flag){
       this.flag=false;
     }
-    let a={username:this.username,juzi_id:index,flag:this.flag};
+    this.user_id = localStorage.getItem('user_id');
+    let a={user_id:this.user_id,juzi_id:index,flag:this.flag};
     console.log(a);
     //如果ischeck为true，发送post请求
     //每点击一次，应该重新获取状态，使flag正确标识图标
