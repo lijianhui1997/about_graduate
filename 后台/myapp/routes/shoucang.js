@@ -6,12 +6,12 @@ const db = require('../model/database');
 router.post('/insert', function(req, res) {
       res.header('Access-Control-Allow-Origin','*');
       res.header('Content-Type','text/plain; charset="utf-8"');
-      var username=req.body.username;
+      var user_id=req.body.user_id;
       var juzi_id=req.body.juzi_id;
       var ifsc=req.body.flag;
       console.log(ifsc);
-      	const sql = 'insert into shoucang(username,juzi_id) values(?,?) ';
-        db.query(sql,[username,juzi_id],(err,result)=>{
+      	const sql = 'insert into shoucang(user_id,juzi_id) values(?,?) ';
+        db.query(sql,[user_id,juzi_id],(err,result)=>{
                         if(err){ console.log(err);   }
                         res.send(result);
              });
@@ -21,12 +21,12 @@ router.post('/insert', function(req, res) {
 router.post('/delete',function(req,res){
       res.header('Access-Control-Allow-Origin','*');
       res.header('Content-Type','text/plain; charset="utf-8"');
-      var username=req.body.username;
+      var user_id=req.body.user_id;
       var juzi_id=req.body.juzi_id;
       var ifsc=req.body.flag;
       console.log(ifsc);
-       const sql = 'delete from shoucang where username=? and juzi_id=?';
-                db.query(sql,[username,juzi_id],(err,result)=>{
+       const sql = 'delete from shoucang where user_id=? and juzi_id=?';
+                db.query(sql,[user_id,juzi_id],(err,result)=>{
                 if(err){ console.log(err); }
                 res.send(result);
         });
@@ -36,10 +36,9 @@ router.post('/delete',function(req,res){
 router.post('/content', function(req, res) {
       res.header('Access-Control-Allow-Origin','*');
       res.header('Content-Type','text/plain; charset="utf-8"');
-      var username=req.body.username;
-      console.log(username);
-      const sql = 'select * from (shoucang,juzi) where shoucang.juzi_id=juzi.juzi_id and username=? ';
-        db.query(sql,[username],(err,result)=>{
+      var user_id=req.body.user_id;
+      const sql = 'select * from (shoucang,juzi) where shoucang.juzi_id=juzi.juzi_id and user_id=? ';
+        db.query(sql,[user_id],(err,result)=>{
                         if(err){ console.log(err);   }
 			console.log(result);
 			res.send(result);

@@ -12,6 +12,8 @@ var zhuce = require('./routes/zhuce.js');
 var login = require('./routes/login');
 var juzi = require('./routes/juzi');
 var novel = require('./routes/novel');
+var search = require('./routes/search');
+var pinglun = require('./routes/pinglun');
 var app = express();
 
 // view engine setup
@@ -32,6 +34,8 @@ app.use('/zhuce',zhuce);
 app.use('/login',login);
 app.use('/juzi',juzi);
 app.use('/novel',novel);
+app.use('/search',search);
+app.use('/pinglun',pinglun);
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

@@ -24,6 +24,21 @@ router.post('/', function(req, res) {
 
 });
 
+router.post('/getinfo',function(req,res){
+	res.header('Access-Control-Allow-Origin','*');
+	res.header('Content-Type','text/plain; charset="utf-8"');
+	var user_id=req.body.user_id;
+	const sql = 'select * from user where user_id=?';
+	if(user_id){
+		db.query(sql,[user_id],(err,result)=>{
+			if(err){
+			res.send('error:'+err);
+			}
+			res.send(result);
+		})
+	}
+});
+
 module.exports = router;
 
 

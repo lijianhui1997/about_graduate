@@ -59,5 +59,30 @@ router.post('/update',function(req,res){
 
 });
 
+router.post('/rewrite',function(req,res){
+        res.header('Access-Control-Allow-Origin','*');
+        res.header('Content-Type','text/plain; charset="utf-8"');
+        var sex=req.body.sex;
+	var tel=req.body.tel;
+	var email=req.body.email;
+	var sex=req.body.sex;
+        var username=req.body.username;
+        const sql='update user set sex=?,tel=?,email=?,username=? where user_id=?';
+        if(sex && username){
+                db.query(sql,[sex,tel,email,username,user_id],(err,result)=>{
+                 if(err){
+                console.error("Error:",err);
+                          process.exit();
+
+                 }
+            console.log(result);
+            res.send(result);
+        })
+        }
+
+
+});
+
+
 module.exports = router;
 
