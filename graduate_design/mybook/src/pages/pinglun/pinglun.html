@@ -1,0 +1,31 @@
+<!--
+  Generated template for the PinglunPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content>
+    <img src="../../assets/return.png" style="width:100px;height:100px;" (click)="goback()"/>
+    <div class="reason" >
+        <div class="book-img" *ngFor='let items of novel;let i=index'>
+            <img src="{{items.img}}" />
+        </div>
+        
+        <div class="book-info" >  
+            <h3>书友评论</h3>
+            <ul  *ngFor='let item of pinglun;let i=index'>
+              <li>
+                  {{item.plcontent}}
+                        <span>--{{item.username}}</span>
+              </li>
+            </ul>     
+        </div>
+        <textarea #content></textarea>
+                
+        <input type="button"  value="确认发表" class="fabiao" (click)="fabiao(content)"/>
+        <img src="../../assets/pinglun.png" style="width:30px;height:30px" class="write"/> 
+     </div>
+     
+</ion-content>

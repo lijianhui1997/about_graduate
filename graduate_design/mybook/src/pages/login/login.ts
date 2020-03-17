@@ -51,4 +51,8 @@ export class LoginPage {
     this.navCtrl.push(ChoosePage);
 
   }
+
+  goback(){
+    this.navCtrl.pop();
+  }
 }

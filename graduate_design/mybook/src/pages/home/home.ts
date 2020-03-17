@@ -7,12 +7,14 @@ import { LoginPage } from '../login/login';
 import { NovelPage } from '../novel/novel';
 import { DetailPage } from '../detail/detail';
 import { XinxiPage } from '../xinxi/xinxi';
+import { PinglunPage } from '../pinglun/pinglun';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  idx;
   user_id;
   flag=false;
   isActive=1;
@@ -21,7 +23,9 @@ export class HomePage {
   userinfo;
   username;
   novel;
+  pinglun;
   haslogin=false;
+  show=false;
   imgsrc='http://lijianhui.site/image/heart.png';
   imgsrc1='http://lijianhui.site/image/Heart.png';
   scjz;
@@ -103,19 +107,11 @@ export class HomePage {
   }
 
     if(i==3){
-      let a={type:'青春校园'};
-      //青春校园读物
-      console.log(3);
-      this.http.post('/novel/qingchun',a,{
-        headers : this.headers,
-        observe : 'body',
-        responseType : 'json'
-      }
-    ).subscribe(data=>{
-        console.log(data);
+      //加载小说信息
+      this.http.get('http://47.93.25.185:8000/').subscribe(data=>{
         this.novel=data;
       });
-
+      //加载评论信息
     }
 
     if(i==4){
@@ -179,4 +175,8 @@ export class HomePage {
     this.navCtrl.push(XinxiPage);
   }
 
+  gopinglun(i){
+    this.navCtrl.push(PinglunPage,{index:i+1});
+    console.log(i);
+  }
 }

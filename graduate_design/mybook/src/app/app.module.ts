@@ -12,6 +12,7 @@ import { NovelPage } from '../pages/novel/novel';
 import { DetailPage } from '../pages/detail/detail';
 import { ChoosePage } from '../pages/choose/choose';
 import { XinxiPage } from '../pages/xinxi/xinxi';
+import { PinglunPage } from '../pages/pinglun/pinglun';
 
 import { HttpClientModule  } from '@angular/common/http';
 
@@ -24,7 +25,8 @@ import { HttpClientModule  } from '@angular/common/http';
     NovelPage,
     DetailPage,
     ChoosePage,
-    XinxiPage
+    XinxiPage,
+    PinglunPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { HttpClientModule  } from '@angular/common/http';
     NovelPage,
     DetailPage,
     ChoosePage,
-    XinxiPage
+    XinxiPage,
+    PinglunPage
   ],
   providers: [
     StatusBar,

@@ -12,8 +12,8 @@
           </div>
           <div class="bottom">
               <span (click)="isClick(1)" [class.first]="isActive==1">首页</span>
+              <span (click)="isClick(3)" [class.first]="isActive==3">推荐理由</span>
               <span (click)="isClick(2)" [class.first]="isActive==2">经典句子</span>
-              <span (click)="isClick(3)" [class.first]="isActive==3">青春</span>
               <span (click)="isClick(4)" [class.first]="isActive==4">句子收藏</span>
           </div>
       </div>
@@ -92,21 +92,20 @@
             </div>
 
             <div *ngSwitchCase = "3">
-                <div class="myimg">
-                    <ul *ngFor='let item of novel'>
+                <div class="reason">
+                    <ul *ngFor='let item of novel;let i=index'>
                         <li>
                             <div class="book-img">
-                                <a href="#" >
                                         <img src="{{item.img}}" />
-                                </a>
                             </div>
                             <div class="book-info">
-                                <a>
-                                             <h4>{{item.name}}</h4>      
-                                </a>
+                                <h3>推荐理由</h3>
                                 <p>
-                                {{item.content}}
+                                {{item.reason}}
                                 </p>
+                                <img src="../../assets/chahua1.jpg" style="width:100px;height:100px;margin-left:50px"/>
+                                <button (click)="gopinglun(i)">发表书评</button>
+                                <img src="../../assets/pinglun1.png" style="width:100px;height:100px"/>
                             </div>
                         </li>
                     </ul>
