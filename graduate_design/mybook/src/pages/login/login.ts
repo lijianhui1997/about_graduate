@@ -28,8 +28,6 @@ export class LoginPage {
   userinfo;
   login(username:HTMLInputElement,password:HTMLInputElement){
     let info={username:username.value,password:password.value};
-    
-
     this.http.post('/login',info,{
       headers : this.headers,
       observe : 'body',
@@ -41,15 +39,14 @@ export class LoginPage {
     if(JSON.stringify(data) === '[]' || data===null) {
       alert('用户名或密码错误，请重新输入！');
       return ;
-      }
-    this.userinfo=data;
-    console.log(this.userinfo[0].user_id);
-    localStorage.setItem('user_id',this.userinfo[0].user_id);
-    localStorage.setItem('username',this.userinfo[0].username);//本地存储username
+      }else{
+        this.userinfo=data;
+        console.log(this.userinfo[0].user_id);
+        localStorage.setItem('user_id',this.userinfo[0].user_id);
+        localStorage.setItem('username',this.userinfo[0].username);//本地存储username
+        this.navCtrl.push(ChoosePage);
+      }   
     });
-
-    this.navCtrl.push(ChoosePage);
-
   }
 
   goback(){

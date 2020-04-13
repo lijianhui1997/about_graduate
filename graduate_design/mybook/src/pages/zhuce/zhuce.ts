@@ -48,7 +48,6 @@ export class ZhucePage {
           email:email.value,
           tel:tel.value
         }
-
         this.http.post('/zhuce',a,{
           headers : this.headers,
           observe : 'body',
@@ -57,8 +56,6 @@ export class ZhucePage {
       ).subscribe(data=>{
           // console.log(data);
         console.log(data);
-        
-
         });
         this.navCtrl.push(ChoosePage);
     }

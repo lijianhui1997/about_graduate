@@ -38,6 +38,7 @@ export class HomePage {
   ionViewDidLoad() {
     this.http.get('http://47.93.25.185:8000/').subscribe(data=>{
       this.user=data;
+      console.log(data);
     });
     this.user_id = localStorage.getItem('user_id');
     this.username = localStorage.getItem('username');
