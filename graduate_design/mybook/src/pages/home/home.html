@@ -4,7 +4,7 @@
           <div class="top">
                   <img src="../assets/rem.png" class="logo"/>
                   <span class="title">书籍推荐网</span>
-                  <input type="search" id="search" placeholder="您想看的书籍" #type/>
+                  <input type="search" id="search" placeholder="您想看的书籍类型" #type/>
                   <input type="button" id="sousuo" value="搜索" (click)="search(type)"/>
                   <span class="zhuce" (click)="zhuce()">没有账号？注册一个</span>
                   <img src="{{ !haslogin ? avaster1:avaster2}}" class="my" style="width:60px;height:60px" (click)="go()"/>

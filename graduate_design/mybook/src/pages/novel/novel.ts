@@ -44,7 +44,7 @@ export class NovelPage {
     console.log('ionViewDidLoad NovelPage');
   }
 
-  getback(){
+  goback(){
     this.navCtrl.pop();
   }
 

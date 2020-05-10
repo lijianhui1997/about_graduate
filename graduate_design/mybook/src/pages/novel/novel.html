@@ -10,9 +10,9 @@
 
 
 <ion-content padding> 
-    <div id="back">
-        <button (click)="getback()">GO BACK</button>
-    </div>
+  <div class="goback">
+    <img src="../../assets/return.png" style="width:100px;height:100px;margin-left:100px;" (click)="goback()"/>
+  </div>
       <div id="novel">
         <ul *ngFor='let item of novel'>
           <li>
